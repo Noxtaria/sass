@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@use "sass:list";
+
+//Police du corps de page
+$body-font: Verdana, Geneva, Tahoma, sans-serif;
+
+//Couleurs
+$black-color: #333;
+//Couleurs Italie
+$red-color: #cd212a;
+$green-color: #008c45;
+$white-color: #f4f5f0;
+
+//Diets
+$diets-fish: darkblue;
+$diets-ham: darkred;
+
+//Lists
+$breakpoints: 540px, 720px, 960px;
+
+//$maps
+$diets: (
+    fish: darkblue,
+    ham: darkred,
+    vege: darkgreen,
+);
+
+//Mixins
+@mixin media-query($breakpoints) {
+    @media (min-width: $breakpoints) {
+        @content;
+    }
+}
+
+body {
+    font-family: $body-font;
+    color: $black-color;
+}
+
+//Menu de navigation
+
+.main-menu {
+    background-color: #8c0047;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        @include media-query(list.nth($breakpoints, 1)) {
+            flex-wrap: nowrap;
+        }
+
+        li {
+            flex: 100%;
+
+            @include media-query(list.nth($breakpoints, 1)) {
+                flex: 1 0 auto;
+            }
+
+            @include media-query(list.nth($breakpoints, 2)) {
+                flex: 0 1 auto;
+            }
+        }
+
+        a {
+            border: 1px solid $black-color;
+            text-decoration: none;
+            display: block;
+            padding: 0.25em 0.5em;
+            background-color: $white-color;
+            color: $red-color;
+            margin: 0.25em;
+
+            &:hover {
+                background-color: $red-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.pizza {
+    border: 1px solid $black-color;
+}
+
+.pizza.diet-fish {
+    color: map-get($diets, "fish");
+}
+
+.pizza.diet-ham {
+    color: map-get($diets, "ham");
+}
+
+.pizza.diet-vege {
+    color: map-get($diets, "vege");
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@use "sass:list";
+
+//Configurations
+@import "abstracts/_functions", "abstracts/_mixins", "abstracts/_variables";
+
+//Base
+
+@import "base/_typography";
+
+//Components
+@import "components/_main_menu.scss", "components/_pizza";

@@ -1,0 +1,64 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+.main-menu {
+  background-color: #8c0047;
+}
+.main-menu ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@media (min-width: 540px) {
+  .main-menu ul {
+    flex-wrap: nowrap;
+  }
+}
+.main-menu ul li {
+  flex: 100%;
+}
+@media (min-width: 540px) {
+  .main-menu ul li {
+    flex: 1 0 auto;
+  }
+}
+@media (min-width: 720px) {
+  .main-menu ul li {
+    flex: 0 1 auto;
+  }
+}
+.main-menu ul a {
+  border: 1px solid black;
+  text-decoration: none;
+  display: block;
+  padding: 0.25em 0.5em;
+  background-color: #f4f5f0;
+  color: #cd212a;
+  margin: 0.25em;
+}
+.main-menu ul a:hover {
+  background-color: #cd212a;
+  color: #f4f5f0;
+}
+
+.pizza {
+  border: 1px solid black;
+}
+
+.pizza.diet-fish {
+  color: darkblue;
+}
+
+.pizza.diet-ham {
+  color: darkred;
+}
+
+.pizza.diet-vege {
+  color: darkgreen;
+}
+
+/*# sourceMappingURL=styles.css.map */

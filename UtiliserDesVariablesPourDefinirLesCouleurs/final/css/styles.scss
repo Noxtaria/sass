@@ -1,0 +1,31 @@
+//Police du corps de pages
+$body-font: Verdana, Geneva, Tahoma, sans-serif;
+//Couleurs
+$black-color: #333;
+
+//Diets
+$diets-fish: darkblue;
+$diets-ham: darkred;
+$diets-vege: darkgreen;
+
+
+body {
+    font-family: $body-font;
+    color: $black-color;
+}
+
+.pizza {
+    border: 1px solid $black-color;
+}
+
+.pizza.diet-fish {
+    color: $diets-fish;
+}
+
+.pizza.diet-ham {
+    color: $diets-ham;
+}
+
+.pizza.diet-vege {
+    color: $diets-vege;
+}

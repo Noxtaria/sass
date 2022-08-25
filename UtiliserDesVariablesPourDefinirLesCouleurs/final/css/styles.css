@@ -1,0 +1,20 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+}
+
+.pizza {
+  border: 1px solid #333;
+}
+
+.pizza.diet-fish {
+  color: darkblue;
+}
+
+.pizza.diet-ham {
+  color: darkred;
+}
+
+.pizza.diet-vege {
+  color: darkgreen;
+}/*# sourceMappingURL=styles.css.map */

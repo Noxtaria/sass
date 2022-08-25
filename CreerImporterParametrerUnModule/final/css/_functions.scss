@@ -1,0 +1,37 @@
+//Fonctions
+
+@function calcSimplifiee($a, $b, $op, $unite) {
+
+    //On vérifie la validité des unités
+    @if $unite =="em" or $unite =="rem" or $unite =="px" or $unite =="%" or $unite=="" {
+
+        //On effectue une opération selon l'opérateur et on vérifie la validité de l'opérateur
+        @if $op =="*" {
+            @return $a * $b +string.unquote($unite);
+        }
+
+        @else if $op =="+" {
+            @return $a +$b +string.unquote($unite);
+        }
+
+        @else if $op =="*" {
+            @return $a * $b +string.unquote($unite);
+        }
+
+        @else if $op =="-" {
+            @return $a - $b +string.unquote($unite);
+        }
+
+        @else if $op =="/" {
+            @return math.div($a, $b)+string.unquote($unite);
+        }
+
+        @else {
+            @error ('Paramètre non valide');
+        }
+    }
+
+    @else {
+        @error ('Unité non valide');
+    }
+}

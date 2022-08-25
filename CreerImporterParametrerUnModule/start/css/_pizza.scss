@@ -1,0 +1,15 @@
+.pizza {
+    border: 1px solid $pizza-color;
+}
+
+.pizza.diet-fish {
+    color: map-get($diets, "fish");
+}
+
+.pizza.diet-ham {
+    color: map-get($diets, "ham");
+}
+
+.pizza.diet-vege {
+    color: map-get($diets, "vege");
+}
